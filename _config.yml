@@ -1,0 +1,9 @@
+title: Riesel Base-71 Settlements
+description: Public evidence for 11 certified least-n results in the Riesel base-71 conjecture.
+url: https://bobtoshi.github.io
+baseurl: /riesel-base-71-settlements
+repository: Bobtoshi/riesel-base-71-settlements
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false

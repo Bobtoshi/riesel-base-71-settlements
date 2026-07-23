@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#102a3b">
+    <meta name="description" content="{{ page.description | default: site.description | escape }}">
+    <title>{% if page.title %}{{ page.title | escape }} · {% endif %}{{ site.title | escape }}</title>
+    <link rel="icon" href="{{ '/assets/images/favicon.svg' | relative_url }}" type="image/svg+xml">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to evidence</a>
+    <header class="site-header">
+      <a class="site-mark" href="{{ '/' | relative_url }}" aria-label="Riesel Base-71 Settlements home">
+        <span class="site-mark__formula">k·71ⁿ−1</span>
+        <span class="site-mark__label">Evidence ledger</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="{{ '/' | relative_url }}">Overview</a>
+        <a href="{{ '/report.html' | relative_url }}">Full report</a>
+        <a href="{{ '/verification.html' | relative_url }}">Verification</a>
+        <a href="{{ '/data/riesel-71-certificates.jsonl' | relative_url }}">Certificates</a>
+      </nav>
+    </header>
+
+    <main id="content">
+      {% if page.url == "/" %}
+        {{ content }}
+      {% else %}
+        <article>
+          {{ content }}
+        </article>
+      {% endif %}
+    </main>
+
+    <footer class="site-footer">
+      <p>Data and text: CC0 1.0 · Code: MIT</p>
+      <p><a href="{{ '/LICENSE.html' | relative_url }}">License details</a> · <a href="https://github.com/Bobtoshi/riesel-base-71-settlements">GitHub repository</a></p>
+    </footer>
+  </body>
+</html>
